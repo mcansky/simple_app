@@ -4,8 +4,8 @@ require 'rack/cache'
 
 use Rack::Cache,
   :verbose => true,
-  :metastore   => "memcached://localhost:11211/meta",
-  :entitystore => "memcached://localhost:11211/body"
+  :metastore   => "memcached://185.14.186.135:11211/meta",
+  :entitystore => "memcached://185.14.186.135:11211/body"
 
 
 get '/' do
