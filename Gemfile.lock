@@ -1,8 +1,11 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    dalli (2.6.4)
     kgio (2.8.0)
     rack (1.5.2)
+    rack-cache (1.2)
+      rack (>= 0.4)
     raindrops (0.11.0)
     sinatra (1.1.0)
       rack (~> 1.1)
@@ -17,5 +20,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  dalli
+  rack-cache
   sinatra (= 1.1.0)
   unicorn

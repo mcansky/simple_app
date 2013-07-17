@@ -1,6 +1,15 @@
 require 'sinatra'
+require 'dalli'
+require 'rack/cache'
+
+use Rack::Cache,
+  :verbose => true,
+  :metastore   => "memcached://localhost:11211/meta",
+  :entitystore => "memcached://localhost:11211/body"
+
 
 get '/' do
+  cache_control :public, :max_age => 3600
   "Hello, world"
 end
 
